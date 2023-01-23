@@ -3,7 +3,7 @@
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 (require 'org)
 (setq org-todo-keywords
-      '((sequence "TODO" "IN-PROGRESS" "WAITING" "CANCELLED" "SOMEDAY" "DONE")))
+      '((sequence "TODO(d)" "IN-PROGRESS(n)" "WAITING(w)" "CANCELLED(c)" "SOMEDAY(s)" "DONE(d)")))
 
 ;; Setup a selection background (C-SPC or C-@)
 (set-face-attribute 'region nil :background "#666")
