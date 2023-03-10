@@ -1,9 +1,13 @@
+;; https://raw.githubusercontent.com/integral-dw/org-bullets/master/org-bullets.el
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 ;; Wrap a line at 80 colulmns
 (add-hook 'org-mode-hook '(lambda () (setq fill-column 80)))
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 (require 'org)
 (setq org-todo-keywords
-      '((sequence "TODO(t)" "IN-PROGRESS(n)" "WAITING(w)" "CANCELLED(c)" "SOMEDAY(s)" "DONE(d)")))
+      '((sequence "TODO(t)" "IN-PROGRESS(n)" "NEXT(x)" "WAITING(w)" "CANCELLED(c)" "SOMEDAY(s)" "DONE(d)")))
 
 ;; Setup a selection background (C-SPC or C-@)
 (set-face-attribute 'region nil :background "#666")
